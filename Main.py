@@ -1,9 +1,14 @@
-from Dis import Dis
 from Roots import Roots
+from Roots import Discriminant
+from Check import Check
 
+a = input()
+b = input()
+c = input()
 
-my_dis = Dis(3.2, -7.8, 1)
-print(my_dis.discriminant_count())
-my_roots = Roots(3.2, -7.8, 1, my_dis.discriminant_count())
-print(my_roots.roots_count())
+my_check = Check
 
+my_dis = Discriminant(a, b, c)
+print(my_dis.get_discriminant())
+my_roots = Roots(a, b, my_dis.get_discriminant())
+print(my_roots.get_roots())

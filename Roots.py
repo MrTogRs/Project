@@ -1,20 +1,29 @@
-from Dis import Dis
+class Discriminant:
+
+    def __init__(self, a, b, c):
+        self.__a = float(a)
+        self.__b = float(b)
+        self.__c = float(c)
+        self.__discriminant_value = 0
+
+    def get_discriminant(self):
+        self.__discriminant_value = self.__b ** 2 - 4 * self.__a * self.__c
+        return self.__discriminant_value
 
 
-class Roots(Dis):
-    def __init__(self, a, b, c, value):
-        self.a = float(a)
-        self.b = float(b)
-        self.c = float(c)
-        self.value = float(value)
+class Roots:
+    def __init__(self, a, b, discriminant_value):
+        self.__a = float(a)
+        self.__b = float(b)
+        self.__discriminant_value = discriminant_value
 
-    def roots_count(self):
-        if self.value > 0:
-            x1 = (-self.b + self.value**1/2) / (2 * self.a)
-            x2 = (-self.b - self.value**1/2) / (2 * self.a)
-            return float(x1), float(x2)
-        elif self.value == 0:
-            x1 = -self.b / (2 * self.a)
-            return float(x1)
+    def get_roots(self):
+        if self.__discriminant_value > 0:
+            x1 = (-self.__b + self.__discriminant_value ** (1 / 2)) / (2 * self.__a)
+            x2 = (-self.__b - self.__discriminant_value ** (1 / 2)) / (2 * self.__a)
+            return x1, x2
+        elif self.__discriminant_value == 0:
+            x1 = -self.__b / (2 * self.__a)
+            return x1
         else:
             return "Нет корней"
