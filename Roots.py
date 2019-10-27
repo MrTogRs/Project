@@ -21,7 +21,7 @@ class Roots:
         if self.__discriminant_value > 0:
             x1 = (-self.__b + self.__discriminant_value ** (1 / 2)) / (2 * self.__a)
             x2 = (-self.__b - self.__discriminant_value ** (1 / 2)) / (2 * self.__a)
-            return x1, x2
+            return [x1, x2]
         elif self.__discriminant_value == 0:
             x1 = -self.__b / (2 * self.__a)
             return x1
