@@ -7,7 +7,7 @@ class Check:
     def check_values(self):
         try:
             if ((type(float(self.__a)) and type(float(self.__b)) and
-               type(float(self.__b)) and type(float(self.__c))) is float) and self.__a != 0:
+               type(float(self.__c))) is float) and self.__a != 0:
                 return True
         except ValueError:
             return False
