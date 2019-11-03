@@ -8,7 +8,7 @@ c = input()
 
 my_check = Check(a, b, c)
 
-if my_check.check_values() is True:
+if my_check.check_values():
     my_dis = Discriminant(a, b, c)
     print(my_dis.get_discriminant())
     my_roots = Roots(a, b, my_dis.get_discriminant())
