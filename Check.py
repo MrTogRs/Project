@@ -7,8 +7,10 @@ class Check:
     def check_type(self):
         try:
             if ((type(float(self.__a)) is float:
+                return True
             if ((type(float(self.__b)) is float:
+                return True
             if ((type(float(self.__c)) is float:
-            return True
+                return True
         except ValueError:
             return False
