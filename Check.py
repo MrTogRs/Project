@@ -4,10 +4,13 @@ class Check:
         self.__b = b
         self.__c = c
 
-    def check_values(self):
+    def check_type(self):
         try:
-            if ((type(float(self.__a)) and type(float(self.__b)) and
-               type(float(self.__c))) is float) and self.__a != 0:
+            if ((type(float(self.__a)) is float:
+                return True
+            if ((type(float(self.__b)) is float:
+                return True
+            if ((type(float(self.__c)) is float:
                 return True
         except ValueError:
             return False
